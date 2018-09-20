@@ -23,8 +23,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="nav-wrapper orange">
-        <img id="logo" src="img/turtle_burger.png">
+      <div class="nav-wrapper">
+        <img class="brand-logo" id="logo" src="img/turtle_burger.png">
         <div id="nameTitle"> Steady Eats </div>
         <form id="searchBar">
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -32,7 +32,7 @@
       </div>
       <div class="row">
 
-        <div class="col s7">
+        <div class="col m7 s12">
           <div id="foodName"></div>
           <div id="mapAndPic">
             <div id="pic"></div>
@@ -45,9 +45,9 @@
           </div>
         </div>
   
-        <div class="col s4 offset-s1">
-            <div class = "nutrition">
-                <div>Nutrition Facts</div>
+        <div class="col m5 s12">
+            <div class="nutrition">
+              <div><b>Nutrition Facts</b></div>
               <div class="nutritionTitles">
                   <div>Serving size
                     <div class="serving right-align"></div>
@@ -85,6 +85,7 @@
                     <div class="openOrClosed"></div>
                   </div>
                   <div class="yelpInfo">
+                    <div class="direction-title">Yelp Info when Location Clicked on Map</div>
                     <div class="address"></div>
                     <div class="phone"></div>
                   </div>
@@ -103,10 +104,11 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button class="okBtn"><span>OK</span></button>
+        <button class="okBtn btn print">Print</button>
+        <button id="mapCloseButton" class="okBtn btn close">Close</button>
     </div>
   </div>
 
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD08VLkun5YCMQytEJFegXC0W70ODQkf-Y&libraries=places&callback=initAutocomplete"></script>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAW1PNWyIkS9XVn5rbe4iGqd8GSXOBf8o&libraries=places&callback=initAutocomplete"></script>
   </body>
 </html>
