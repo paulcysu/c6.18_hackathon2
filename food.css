@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Aleo;
+  src: url(/font/Aleo-Regular.otf);
+}
+
 table{
     background-color: green;
     width: 50px;
@@ -41,26 +46,83 @@ table{
 
 #logo {
   display: inline-block;
-  width: 5%;
+  width: 8%;
+}
+
+#logo img {
+  width: 100%;
 }
 
 #logo:hover{
   cursor: pointer;
 }
 
-
-#nameTitle{
+#nameTitle {
     display: inline;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: rgb(5, 129, 5);
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: Aleo, sans-serif;
 }
 
-.foodName {
-  font-size: 3em;
+#question {
+  padding-top: 4%;
+}
+
+.nav-wrapper {
+  position: relative;
+  border-bottom: 2px solid orange;
+}
+
+.nutrition {
+  font-size: 1.2rem;
+}
+
+.nutrition > div:first-child {
+  padding-left: 1%
+}
+
+.nutritionTitles > div {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+@media only screen and (max-width: 800px) {
+  #nameTitle {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .container > .nav-wrapper {
+    height: 9vh
+  }
+  #mapAndPic {
+    text-align: center;
+  }
+  #question {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #logo {
+    width: 15%;
+  }
+}
+
+/* @media only screen and (max-width: 400px) {
+  #logo {
+    width: 17%
+  }
+} */
+
+#foodName {
+  font-size: 3rem;
+  font-family: Aleo, sans-serif;
 }
 
 #mapAndPic {
@@ -180,12 +242,43 @@ table{
 
 .yelpTitle, .yelpInfo {
   padding-left: 2%;
-  padding-bottom: 3%;
+}
+
+.yelpTitle > *  {
+  line-height: 1.7rem;
+}
+
+.yelpInfo {
+  margin-bottom: 3%;
+}
+
+.yelpTitle .name {
+  font-family: Aleo, san-serif;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.direction-title {
+  font-family: Aleo, san-serif;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.openOrClosed {
+  font-family: Aleo, sans-serif;
 }
 
 .modal {
   top: 10%;
   z-index: 1;
+}
+
+.modal-footer {
+  margin-bottom: 20px !important;
+}
+
+#mapCloseButton {
+  margin-right: 16px;
 }
 
 .adp table {
