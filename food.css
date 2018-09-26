@@ -46,7 +46,13 @@ table{
 
 #logo {
   display: inline-block;
+  max-width: 100%;
+}
+
+.logo-container {
+  display: inline-block;
   width: 8%;
+  object-fit: cover;
 }
 
 #logo img {
@@ -106,19 +112,20 @@ table{
   #question {
     text-align: center;
   }
+  .logo-container {
+    width: 10%;
+    height: 100%;
+  }
+  #logo {
+    max-height: 100%;
+  }
 }
 
-@media only screen and (max-width: 700px) {
-  #logo {
+@media only screen and (max-width: 635px) {
+  .logo-container {
     width: 15%;
   }
 }
-
-/* @media only screen and (max-width: 400px) {
-  #logo {
-    width: 17%
-  }
-} */
 
 #foodName {
   font-size: 3rem;
