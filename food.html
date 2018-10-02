@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Food Information </title>
+    <title>Steady Eats || Nutrition </title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel= "stylesheet" type="text/css" href="food.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <!--added these three for modal to work-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script
-              src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-              integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-              crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src = "food.js"></script>
     <script src = "yelp.js"></script>
     <script src = "nutrient.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="nav-wrapper orange">
-        <img id="logo" src="img/turtle_burger.png">
+      <div class="nav-wrapper">
+        <div class="logo-container">
+            <img class="brand-logo" id="logo" src="img/turtle_burger.png">
+        </div>
         <div id="nameTitle"> Steady Eats </div>
         <form id="searchBar">
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -32,22 +35,22 @@
       </div>
       <div class="row">
 
-        <div class="col s7">
+        <div class="col m7 s12">
           <div id="foodName"></div>
           <div id="mapAndPic">
             <div id="pic"></div>
             <div id="map"></div>
           </div>
           <div id="question">
-          <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="findMore">I want this!</button>  
+          <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="findMore">Search Maps</button>  
           <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="reset">Start Over</button>
           <button class="btn right-align scale-transition scale-out waves-effect waves-light" id="goThere">Get me there!</button>
           </div>
         </div>
   
-        <div class="col s4 offset-s1">
-            <div class = "nutrition">
-                <div>Nutrition Facts</div>
+        <div class="col m5 s12">
+            <div class="nutrition">
+              <div><b>Nutrition Facts</b></div>
               <div class="nutritionTitles">
                   <div>Serving size
                     <div class="serving right-align"></div>
@@ -85,6 +88,7 @@
                     <div class="openOrClosed"></div>
                   </div>
                   <div class="yelpInfo">
+                    <div class="direction-title">Yelp Info when Location Clicked on Map</div>
                     <div class="address"></div>
                     <div class="phone"></div>
                   </div>
@@ -96,6 +100,9 @@
     
   <div id="directionModal" class="modal">
     <div class="modal-content">
+        <div id="mapCloseButton" class="okBtn close right-align">
+          <div class="material-icons">close</div>
+        </div>
         <div class="modal-message">
             <div id="direction">
                 <!--direction got from google displays here-->
@@ -103,10 +110,20 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button class="okBtn"><span>OK</span></button>
+        <button id="mapCloseButton" class="okBtn btn close">Close</button>
     </div>
   </div>
 
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD08VLkun5YCMQytEJFegXC0W70ODQkf-Y&libraries=places&callback=initAutocomplete"></script>
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-message error-message">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn home-modal-button" onclick="history.back()">Back to Home</button>
+    </div>
+  </div>
+
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAW1PNWyIkS9XVn5rbe4iGqd8GSXOBf8o&libraries=places&callback=initAutocomplete"></script>
   </body>
 </html>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SteadyEats</title>
+        <title>Steady Eats</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="titlePage.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -9,30 +11,29 @@
         <script type="text/javascript" src="titlePage.js"></script>
     </head>
     <body>
-        <div id="container">
+        <div class="container">
             <div class="row">
                 <div id="logo" class="col s12 center-align">
                     <img id="logoImage" class="center-align" src="img/turtle_burger.png">
                 </div>
             </div>
             <div id="name" class="col s12 center-align">
-                <img id="nameImage" class="center-align" src="img/titleName.png">
+                Steady Eats
             </div>
-        </div>
-        <div class="row">
-            <div id="loadingText" class="col s12 center-align">
-                <div>search for a food item and we'll tell you what's up</div>
-            </div>
-        </div>
-        <div class="row center-align">
-            <form id="foodForm" class="col s12">
-                <div class="formSection center-align input-field">
-                    <!-- id = food before -->
-                    <input class="center-align white autocomplete" type="text" placeholder="type food item here" id="food">
-                    <label for="food"></label>
-                    <input value="Search" class="btn orange submit" id="search">
+            <div class="row">
+                    <div id="loadingText" class="col s12 center-align">
+                        <div>search for a food item and we'll tell you what's up</div>
+                    </div>
                 </div>
-            </form>
+                <div class="row center-align">
+                    <form id="foodForm" class="col s12">
+                        <div class="formSection center-align input-field">
+                            <!-- id = food before -->
+                            <input class="center-align white autocomplete" type="text" placeholder="type food item here" id="food">
+                            <input value="Search" class="btn orange submit" id="search">
+                        </div>
+                    </form>
+                </div>
         </div>
     </div>
 </body>

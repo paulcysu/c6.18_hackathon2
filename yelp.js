@@ -69,10 +69,11 @@ function createYelpDisplay(response) {
     let price = response.price;
     let reviewCount = response.review_count;
     let rating = response.rating;
-    $('.reviews').text( ` ${price}, ${reviewCount} reviews, ${rating}/5 Stars`)
+    $('.reviews').text( ` ${price} || ${reviewCount} reviews || ${rating} out of 5`)
     let type = response.categories[0].title;
     $('.type').text(type);
     let displayAddress = response.location.display_address[0];
+    $('.direction-title').text("Business Info:")
     $('.address').text(displayAddress);
     let businessImage = response.image_url;
     $('#yelpImage').attr('src', businessImage);
