@@ -17,6 +17,7 @@
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src = "food.js"></script>
     <script src = "yelp.js"></script>
     <script src = "nutrient.js"></script>
@@ -41,7 +42,7 @@
             <div id="map"></div>
           </div>
           <div id="question">
-          <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="findMore">I want this!</button>  
+          <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="findMore">Search Maps</button>  
           <button class="submit btn center-align scale-transition scale-out waves-effect waves-light" id="reset">Start Over</button>
           <button class="btn right-align scale-transition scale-out waves-effect waves-light" id="goThere">Get me there!</button>
           </div>
@@ -99,6 +100,9 @@
     
   <div id="directionModal" class="modal">
     <div class="modal-content">
+        <div id="mapCloseButton" class="okBtn close right-align">
+          <div class="material-icons">close</div>
+        </div>
         <div class="modal-message">
             <div id="direction">
                 <!--direction got from google displays here-->

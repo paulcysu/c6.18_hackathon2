@@ -43,10 +43,10 @@ function applyClickHandler(){
 function modalActivity(){
     let modal = document.getElementById('directionModal');
     $('#goThere').click(function(){
-        $('.modal').show();
+        $('#directionModal').show();
     });
     $('.okBtn').click(function(){
-        $('.modal').hide();
+        $('#directionModal').hide();
     });
     window.onclick = function(event) {
         if (event.target == modal) {
