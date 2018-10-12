@@ -4,7 +4,7 @@ let foodInput = null;
 
 /**
  * apply click handlers once document is ready
- * @param {}
+ * @param {none}
  */
 function initializeApp () {
     addClickHandler();
@@ -41,6 +41,10 @@ $(function() {
         "Tofu": null,
         "Salad": null,
         "Ramen": null,
+        "Avocado": null,
+        "Papaya": null,
+        "Spanich": null,
+        "Cookie": null
       }
     });
 });
@@ -72,9 +76,9 @@ function submitClicked () {
  */
 function changePage () {
     // nutritionCallFromServer($("#food").val());
-
     location.assign("food.html")
 }
+
 /**
  * Will use session storage to get user
  * input
@@ -83,6 +87,4 @@ function retrieveInput () {
     foodInput = $("#food").val();
     let food = sessionStorage;
     food.setFood = foodInput;
-
-
 }

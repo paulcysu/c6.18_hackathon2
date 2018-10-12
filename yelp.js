@@ -1,5 +1,3 @@
-// $(document).ready(initializeApp);
-// let foodItem = sessionStorage.setFood;
 let foodItem = null;
 let yelpResponse = null;
    

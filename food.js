@@ -263,7 +263,6 @@ function computeTotalDistance(result) {
     document.getElementById('total').innerHTML = total + ' km';
 }
 
-
 /**
  * callback function. when user presses start over button or logo button, go
  * back to first screen
