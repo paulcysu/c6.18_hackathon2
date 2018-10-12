@@ -43,10 +43,10 @@ function applyClickHandler(){
 function modalActivity(){
     let modal = document.getElementById('directionModal');
     $('#goThere').click(function(){
-        $('.modal').show();
+        $('#directionModal').show();
     });
     $('.okBtn').click(function(){
-        $('.modal').hide();
+        $('#directionModal').hide();
     });
     window.onclick = function(event) {
         if (event.target == modal) {
@@ -262,7 +262,6 @@ function computeTotalDistance(result) {
     // it displays in km, in future we will converting to miles
     document.getElementById('total').innerHTML = total + ' km';
 }
-
 
 /**
  * callback function. when user presses start over button or logo button, go

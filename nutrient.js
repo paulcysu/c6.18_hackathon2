@@ -38,21 +38,20 @@ function nutritionCallFromServer(){
        success: function(response) {
            let src = response.foods[0].photo.highres;
            let img = $('<img>').attr('src', src);
-           
            $('#pic').html(img);
            storeNutritionToDOM(response.foods[0])
        },
        error: function(error){
+           let errorModal = document.querySelector('#errorModal')
+           let modalMessage = document.querySelector('.error-message');
            if (error.statusText === "Not Found") {
-               alert("Couldn't find " + food + "! Press Ok to go back to home screen");
-               location.assign("index.html");
-               sessionStorage("setFood", "");
+                errorModal.style.display = 'block';
+                modalMessage.innerHTML = "Unable to find \"" + food + "\". Please go back to home screen";
            }
        }
    }
    $.ajax(options);
 }
-
 
 /**
  * Updates DOM with nutrition facts
