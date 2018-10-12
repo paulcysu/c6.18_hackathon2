@@ -38,7 +38,6 @@ function nutritionCallFromServer(){
        success: function(response) {
            let src = response.foods[0].photo.highres;
            let img = $('<img>').attr('src', src);
-           
            $('#pic').html(img);
            storeNutritionToDOM(response.foods[0])
        },
@@ -53,7 +52,6 @@ function nutritionCallFromServer(){
    }
    $.ajax(options);
 }
-
 
 /**
  * Updates DOM with nutrition facts
