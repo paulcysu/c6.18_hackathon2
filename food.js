@@ -48,13 +48,16 @@ function modalActivity(){
     $('.okBtn').click(function(){
         $('#directionModal').hide();
     });
+
+    var directionModal = document.getElementById('directionModal');
+    var directionButton = document.getElementById('goThere');
+
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target !== directionModal && event.target !== directionButton) {
             $('.modal').hide();
         }
     }
 }
-
 
 /**
  * Make a function to autosubmit the input data
@@ -110,8 +113,9 @@ function initAutocomplete() {
             };
 
             infoWindow.setPosition(pos);
+            // you are here window disabled
+            // infoWindow.open(map);
             infoWindow.setContent('You are Here');
-            infoWindow.open(map);
             map.setCenter(pos);
             previousInfoWindow = infoWindow;
         }, function() {
