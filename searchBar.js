@@ -8,6 +8,7 @@ let foodInput = null;
  */
 function initializeApp () {
     addClickHandler();
+    $('#foodForm').on('submit', sumbitSearch);
 }
 
 /**
@@ -58,7 +59,7 @@ function addClickHandler () {
     $(document).keyup(function(event) {
         if ($("#food").is(":focus") && event.key == "Enter") {
             retrieveInput();
-            changePage();
+            sumbitSearch();
         }
     });
 }
@@ -68,7 +69,7 @@ function addClickHandler () {
  */
 function submitClicked () {
     retrieveInput();
-    changePage();
+    // changePage();
 }
 
 /**
@@ -87,4 +88,17 @@ function retrieveInput () {
     foodInput = $("#food").val();
     let food = sessionStorage;
     food.setFood = foodInput;
+}
+
+function sumbitSearch () {
+    event.preventDefault();
+    let input = $('#food').val();
+    let label = $('label');
+    if (input !== '') {
+        changePage();
+        return true;
+    } else {
+        label.html('This field is required').css('color', 'red');
+        return false;
+    }
 }

@@ -267,7 +267,7 @@ table{
 .direction-title {
   font-family: Aleo, san-serif;
   font-size: 1.1rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .openOrClosed {
@@ -285,6 +285,10 @@ table{
 
 .modal-footer > #mapCloseButton {
   margin-right: 16px;
+}
+
+.home-modal-button {
+  margin: 11px 16px !important;
 }
 
 .adp table {

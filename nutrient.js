@@ -46,7 +46,7 @@ function nutritionCallFromServer(){
            let modalMessage = document.querySelector('.error-message');
            if (error.statusText === "Not Found") {
                 errorModal.style.display = 'block';
-                modalMessage.innerHTML = "Unable to find \"" + food + "\". Please go back to home screen";
+                modalMessage.innerHTML = "Unable to find \"" + food + "\". Please go back and input a food name.";
            }
        }
    }
