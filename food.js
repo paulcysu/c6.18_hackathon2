@@ -74,7 +74,6 @@ function submitFormData () {
     }
 }
 
-
 /**
  * Make a function that hides the picture with an id of pic, shows the map
  * with an id of map. Store the session storage variable as a variable called 

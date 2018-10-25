@@ -55,3 +55,8 @@ body {
         margin: auto;
     }
 }
+
+.row label {
+    right: 0;
+    position: absolute;
+}
