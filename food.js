@@ -105,11 +105,14 @@ function initAutocomplete() {
 
     //this is gives us the current location
     if (navigator.geolocation) {
+        debugger;
         navigator.geolocation.getCurrentPosition(function(position) {
             const pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
-            };
+            }
+            origin = pos
+            ;
 
             infoWindow.setPosition(pos);
             // you are here window disabled
@@ -184,7 +187,7 @@ function initAutocomplete() {
                 // send the relevant data to make the Yelp ajax call
                 // send the relevant info to Google Directions
                 requestYelpData(name , address, cityName);
-                displayRoute("9200 Irvine Center Dr, Irvine CA", place.formatted_address);
+                displayRoute(origin, place.formatted_address);
             });
             // Create a marker for each place.
             markers.push(markerLocation);
@@ -229,9 +232,10 @@ function displayRoute(origin, destination) {
         map: map,
         panel: document.getElementById('direction')
     });
-
+    console.log('origin', origin);
     service.route({
         origin: origin,
+        // origin: 
         destination: destination,
         travelMode: 'DRIVING',
         avoidTolls: true

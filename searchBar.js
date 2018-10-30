@@ -9,7 +9,37 @@ let foodInput = null;
 function initializeApp () {
     addClickHandler();
     $('#foodForm').on('submit', sumbitSearch);
+    // nutritionCallFromServer();
 }
+
+/**
+ * AJAX call to nutritonix to get nutrition info
+ */
+// function nutritionCallFromServer(){
+//    let dataForServer = {
+//        "Content-Type": "application/x-www-form-urlencoded",
+//     // "x-app-id": "0657689d",
+//     // "x-app-key": "1c577a065dc2109313e314fdb410b965",
+//        "x-app-id": "ff571cbd",
+//        "x-app-key": "f4112a83315f79c5cdff346b54f08998",
+//        "x-remote-user-id": "0",
+//        "Cache-Control": "no-cache",
+//        "query": 'apple',
+//    };
+//    let options = {
+//        dataType: 'json',
+//        url: 'https://trackapi.nutritionix.com/v2/search/instant?query=apple',
+//        headers: dataForServer,
+//        method: 'get',
+//        success: function(response) {
+//             console.log(response);
+//        },
+//        error: function(error){
+//             console.log(error)
+//        }
+//    }
+//    $.ajax(options);
+// }
 
 /**
  * autofill complete
@@ -45,7 +75,8 @@ $(function() {
         "Avocado": null,
         "Papaya": null,
         "Spanich": null,
-        "Cookie": null
+        "Cookie": null,
+        "Grilled Onions": null
       }
     });
 });
